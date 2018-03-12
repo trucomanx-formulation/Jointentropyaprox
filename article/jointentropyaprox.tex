@@ -1,0 +1,188 @@
+\documentclass[journal]{IEEEtran}
+
+%\usepackage[brazil]{babel}
+%\usepackage[T1]{fontenc}
+
+\usepackage{theorem}        %%Lo agregue yo <========================================
+\usepackage{algorithmic}        %%Lo agregue yo <========================================
+
+\setcounter{secnumdepth}{7}
+
+\newtheorem{theorem}{Theorem}%[section]
+%\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+%\newtheorem{algorithm}[theorem]{Algorithm}
+%\newtheorem{axiom}[theorem]{Axiom}
+%\newtheorem{case}[theorem]{Case}
+%\newtheorem{claim}[theorem]{Claim}
+%\newtheorem{conclusion}[theorem]{Conclusion}
+%\newtheorem{condition}[theorem]{Condition}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+%\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{exercise}[theorem]{Exercise}
+%\newtheorem{notation}[theorem]{Notation}
+%\newtheorem{problem}[theorem]{Problem}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{solution}[theorem]{Solution}
+%\newtheorem{summary}[theorem]{Summary}
+
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\newtheorem{corollary}[theorem]{Corollary}
+\newenvironment{algorithm}[1][Algorithm]{\textbf{#1.} }{}
+
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{psfrag}
+
+\usepackage{accents}
+%\usepackage[none]{hyphenat}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\hyphenation{bet-ween re-pre-sen-ting} %
+\sloppy
+
+\begin{document}
+
+\title{Approximate Joint Entropy for $M$ Correlated Binary Sources }
+
+
+\author{Fernando P. Rivera 
+\thanks{Manuscript received XXXX XX, 2014; revised XXXXX XX, 2014.}
+\thanks{---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- }%%%%Fernando P. Rivera is with Department of Communications, State University of Campinas, Campinas, SP, Brazil. Email:fpujaico@decom.fee.unicamp.br. }
+\thanks{---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- }}%%%%Jaime Portugheis   is with Faculty of Technology       , State University of Campinas, Limeira , SP, Brazil. Email:jaime@ft.unicamp.br  .}}
+
+\markboth{IEEE Communications Letters,~Vol.~X,
+No.~XX,~XXXXX~XXX}{Shell \MakeLowercase{\textit{et al.}}: Bare
+Demo of IEEEtran.cls for Journals}
+
+% make the title area
+\maketitle
+%%%%%%%\IEEEpeerreviewmaketitle
+
+
+\begin{abstract}
+This paper proposes a method for to get an approximation of the joint entropy
+of $M$ correlated binary sources; the approximation gets a linear calculation complexity 
+in relation to the number of sources. 
+Here, it is used a correlating model with a common
+binary source that through $M$ binary symmetric channels in parallel
+to obtain  the $M$ correlated binary sources. 
+
+\end{abstract}
+
+\begin{keywords}
+Multiple correlated sources, large scale sensor networks, joint entropy.
+\end{keywords}
+
+\IEEEpeerreviewmaketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:Intro}
+
+ In the work seen in \cite{fernando}, they are presented equations for the calculus of two cases the 
+ optimal minimum rates in joint source-channel coding of a set of correlated sources;
+ thus, were showed methods for to get the minimal,  common rate and  sum rate.
+ These  rates fulfill the Slepian-Wolf 
+ \cite{slepian} and channel capacity limit \cite{cover} theorems.
+ %This sources transmit your codified information across $M$ orthogonal
+ %channels to a joint decoder. 
+ The results show that, the calculus of 
+ the optimal rates of $M$ correlated sources grows in complexity exponentially 
+ with $M$.  
+ 
+ In this paper, is assumed the same system 
+ model and analyzed the same two cases that 
+ in \cite{fernando}, with the additional restriction that the 
+ sources are so far of the joint decoder, in comparing with the distance 
+ between sensors, so that the channel capacities in all channels are 
+ approximately same. On the other side, the correlation between sources is
+ assumed as random or with spatial correlation \cite{corrspatial},
+ in contrast with studied in \cite{ceobinary1,ceobinary2}, where the correlation
+ between any source pair is same. Other restriction, it 
+ is the use of a specific model of correlated sources; being used a model similar to seen
+ in \cite{ceobinary1,ceobinary2}; where $M$
+ correlated sources are generates passing a common source across $M$ binary 
+ symmetric channels ($BSC$).
+ Using these considerations, it can be deduced: for an optimal common rate a method 
+ with a calculus complexity that grows linearly with the number of sources, 
+ and for optimal sum rate a calculus method of \textcolor{red}{very low complexity
+ when compared of common rate case}. 
+ 
+This paper is organized as follows. The model system and some definitions 
+used in this work are presented in Section \ref{sec:SystemModel}, a brief review of the
+work in \cite{fernando} with a new solution method for to get the optimal 
+common rate is presented in Section \ref{sec:Optimo}, in this line a new method for to get
+the optimal sum rate is described in Section \ref{sec:sumrate}. Some demonstrations
+need for to solve the last sections are presented in
+Section \ref{sec:Appendix} and Section \ref{sec:Conclusions} concludes the paper 
+with some final remarks.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{System Model and Definitions} 
+\label{sec:SystemModel}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Final Remarks and Conclusions} 
+\label{sec:Conclusions}
+In this letter, we considered joint source-channel coding of correlated
+sources transmitted over orthogonal
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgment}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+\section{Appendix} \label{sec:Appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{99}
+
+\bibitem{fernando} Pujaico, F.; Portugheis, J.,
+``Optimal Rate for Joint Source-Channel Coding of Correlated Sources Over 
+Orthogonal Channels,'' Communications Letters, 2014.
+
+\bibitem{ceobinary1} Haghighat, J.; Behroozi, Hamid; Plant, D.V., 
+``Iterative joint decoding for sensor networks with binary CEO model,'' 
+Signal Processing Advances in Wireless Communications, 2008. SPAWC 2008. 
+IEEE 9th Workshop on , vol., no., pp.41,45, 6-9 July 2008.
+
+\bibitem{ceobinary2} Ferrari, G.; Martalo, M.; Abrardo, A.; Raheli, R., 
+``Orthogonal multiple access and information fusion: How many observations are needed?,'' 
+Information Theory and Applications Workshop (ITA), 2012 , vol., no., pp.311,320, 5-10 Feb. 2012.
+
+
+\end{thebibliography}
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\grid
