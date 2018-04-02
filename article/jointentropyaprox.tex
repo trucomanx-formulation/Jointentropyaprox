@@ -75,9 +75,9 @@ to obtain  the $M$ correlated binary sources.
 
 \end{abstract}
 
-\begin{keywords}
-Multiple correlated sources, large scale sensor networks, joint entropy.
-\end{keywords}
+%\begin{keywords}
+%Multiple correlated sources, large scale sensor networks, joint entropy.
+%\end{keywords}
 
 \IEEEpeerreviewmaketitle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,41 +85,13 @@ Multiple correlated sources, large scale sensor networks, joint entropy.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:Intro}
-
- In the work seen in \cite{fernando}, they are presented equations for the calculus of two cases the 
- optimal minimum rates in joint source-channel coding of a set of correlated sources;
- thus, were showed methods for to get the minimal,  common rate and  sum rate.
- These  rates fulfill the Slepian-Wolf 
- \cite{slepian} and channel capacity limit \cite{cover} theorems.
- %This sources transmit your codified information across $M$ orthogonal
- %channels to a joint decoder. 
- The results show that, the calculus of 
- the optimal rates of $M$ correlated sources grows in complexity exponentially 
- with $M$.  
  
- In this paper, is assumed the same system 
- model and analyzed the same two cases that 
- in \cite{fernando}, with the additional restriction that the 
- sources are so far of the joint decoder, in comparing with the distance 
- between sensors, so that the channel capacities in all channels are 
- approximately same. On the other side, the correlation between sources is
- assumed as random or with spatial correlation \cite{corrspatial},
- in contrast with studied in \cite{ceobinary1,ceobinary2}, where the correlation
- between any source pair is same. Other restriction, it 
- is the use of a specific model of correlated sources; being used a model similar to seen
- in \cite{ceobinary1,ceobinary2}; where $M$
- correlated sources are generates passing a common source across $M$ binary 
- symmetric channels ($BSC$).
- Using these considerations, it can be deduced: for an optimal common rate a method 
- with a calculus complexity that grows linearly with the number of sources, 
- and for optimal sum rate a calculus method of \textcolor{red}{very low complexity
- when compared of common rate case}. 
  
 This paper is organized as follows. The model system and some definitions 
-used in this work are presented in Section \ref{sec:SystemModel}, a brief review of the
-work in \cite{fernando} with a new solution method for to get the optimal 
-common rate is presented in Section \ref{sec:Optimo}, in this line a new method for to get
-the optimal sum rate is described in Section \ref{sec:sumrate}. Some demonstrations
+used in this work are presented in Section \ref{sec:SystemModel}, the current method for to get the joint entropy is presented in Section \ref{sec:Joint}, in this line a new method for to get
+the joint entropy is described in Section \ref{sec:NewJoint}. 
+The test of the for to get the joint entropy is presented in Section \ref{sec:Test}
+Some demonstrations
 need for to solve the last sections are presented in
 Section \ref{sec:Appendix} and Section \ref{sec:Conclusions} concludes the paper 
 with some final remarks.
@@ -127,11 +99,43 @@ with some final remarks.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{System Model and Definitions} 
+\section{System Model and Definitions} \label{sec:SystemModel}
+
+The Fig. \ref{fig:model} show $M$ correlated binary sources $U_m$, $1 \leq m \leq M| i \in \mathbb{N}$.
+This sources
+
 \label{sec:SystemModel}
+\begin{figure}[!h]
+  \centering
+    \includegraphics[width=0.8\columnwidth]{sources.eps}
+  \caption{$M$ correlated binary sources.}
+    \label{fig:model}
+\end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Joint entropy in correlated } \label{sec:Joint}
 
+\subsection{General formulation of joint entropy}
+\subsection{Specific formulation of joint entropy when $\rho_i=\rho$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proposed joint entropy calculus } \label{sec:NewJoint}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Numerical analyses } \label{sec:Test}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Demonstrations } \label{sec:Appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Final Remarks and Conclusions} 
 \label{sec:Conclusions}
@@ -141,9 +145,11 @@ sources transmitted over orthogonal
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgment}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\appendix
 \section{Appendix} \label{sec:Appendix}
@@ -162,27 +168,7 @@ Orthogonal Channels,'' Communications Letters, 2014.
 Signal Processing Advances in Wireless Communications, 2008. SPAWC 2008. 
 IEEE 9th Workshop on , vol., no., pp.41,45, 6-9 July 2008.
 
-\bibitem{ceobinary2} Ferrari, G.; Martalo, M.; Abrardo, A.; Raheli, R., 
-``Orthogonal multiple access and information fusion: How many observations are needed?,'' 
-Information Theory and Applications Workshop (ITA), 2012 , vol., no., pp.311,320, 5-10 Feb. 2012.
-
-
 \end{thebibliography}
 
 \end{document}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\grid
