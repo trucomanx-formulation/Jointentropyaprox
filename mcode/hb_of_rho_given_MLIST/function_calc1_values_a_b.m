@@ -1,4 +1,4 @@
-function [A B E]=function_calc_values_a_b(RHO)
+function [A B E]=function_calc1_values_a_b(RHO)
 
     MLIST=[2:20];
     h2s=hb_cond_sbceo(RHO,MLIST);
@@ -14,12 +14,13 @@ function [A B E]=function_calc_values_a_b(RHO)
     end
  
     X=[0.9; 1.1];
-    Y=log2(h2s/H1);
+    Y=log2(h2s/H1)/log2(H1);
     alpha=0.0001;
     E=norm(Y-func_f(X,MLIST));
 
     II=1;
-    while (E>0.001) && (II<100000)
+    IIMAX=100000;
+    while (E>0.001) && (II<IIMAX)
         %II
 
         FF=func_f(X,MLIST);
@@ -40,12 +41,12 @@ function FF=func_f(X,MLIST)
     if ~iscolumn(MLIST)
         MLIST=MLIST';
     end
-    FF=-((MLIST-1).^(X(1)))/X(2);
+    FF=((MLIST-1).^(X(1)))/X(2);
 end
 
 function JJ=func_j(X,MLIST)
     if ~iscolumn(MLIST)
         MLIST=MLIST';
     end
-    JJ=[-(log(MLIST-1).*(MLIST-1).^(X(1)))/X(2) (MLIST-1).^(X(1))/(X(2))^2 ];
+    JJ=[(log(MLIST-1).*(MLIST-1).^(X(1)))/X(2) -(MLIST-1).^(X(1))/(X(2))^2 ];
 end
