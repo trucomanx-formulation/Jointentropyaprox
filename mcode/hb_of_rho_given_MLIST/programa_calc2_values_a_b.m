@@ -1,4 +1,4 @@
-% programa_calc1_values_a_b
+% programa_calc2_values_a_b
 pkg load pdsit
 N=20;
 RHO_init=0.01;
@@ -23,10 +23,13 @@ end
 
 
 hf1=figure(1);
-plot(M,Y(1,:),'-o',M,M*POLY(1,1)+POLY(1,2),'-.',M,Y,'-*',M,Y(end,:),'-s')
-xlim([0 4])
-ylim([0 4])
-print(hf1,'hb_rho_m_rectas.eps','-deps')
+plot(   M,Y(1,:),'-o',M,M*POLY(1,1)+POLY(1,2),'-.', ...
+        M,Y(7,:),'-o',M,M*POLY(7,1)+POLY(7,2),'-.', ...
+        M,Y(13,:),'-o',M,M*POLY(13,1)+POLY(13,2),'-.', ...
+        M,Y(end,:),'-s')
+%xlim([0 4])
+%ylim([0 4])
+print(hf1,'programa_calc2_hb_expo_rectas.eps','-deps')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -50,7 +53,7 @@ legend( 'h_b(\rho)',...
         'h_b(\rho,4)','pow(h_b(\rho),k_1(\rho) 4+ k_2(\rho))',...
         'h_b(\rho,8)','pow(h_b(\rho),k_1(\rho) 8+ k_2(\rho))',...
         'h_b(\rho,16)','pow(h_b(\rho),k_1(\rho) 16+ k_2(\rho))')
-print(hf2,'hb_rho_m_calc2.eps','-deps')
+print(hf2,'programa_calc2_hb_rho_m_aproximacion2.eps','-deps')
 
 %p1 =   0.83174   0.89540
 %p2 =   0.95356   0.33787
